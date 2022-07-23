@@ -26,7 +26,6 @@ async function predict(){
   }
   var URI = `https://${endpoint}/luis/prediction/v3.0/apps/${appId}/slots/staging/predict?${querystring.stringify(queryParams)}`
   const luisReply = await requestpromise(URI);
-  //console.log(luisReply)
   return JSON.parse(luisReply)
 }
 
