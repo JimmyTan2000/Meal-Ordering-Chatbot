@@ -12,8 +12,8 @@ const fallbackMessages =
   ["Ich verstehe nicht", "Wie bitte?","Könnten Sie bitte nochmal sagen?","Tut mir leid, ich fürchte, ich verstehe Sie nicht.", "Huh?"];
 var userInput;
 
-async function predict(){
 
+async function predict(){
   var endpointKey = "72fb65b98a0242cb87c52b10b3344114";
   var endpoint = "internettech.cognitiveservices.azure.com";
   var appId = "1d47b635-ff01-49e3-bc23-dec56db126fe";
@@ -100,7 +100,6 @@ function timeValidityChecker(reply){
   } else{
     ans = fallbackMessagesGenerator()
   }
-  
   return ans
 }
 
@@ -156,7 +155,6 @@ if (Object.keys(reply.prediction.entities)[0] == undefined){
 }
 return ans
 }
-
 
 // Utils
 function get(selector, root = document) {
